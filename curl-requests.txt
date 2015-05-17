@@ -1,0 +1,15 @@
+
+GET API/USERS
+curl -H "Authorization: Bearer JWT TOKEN" -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:8080/api/users
+
+POST API/USERS
+curl -H "Authorization: Bearer JWT TOKEN" --data "username=newuser&email=new@user.co.uk" http://localhost:8080/api/users
+
+PUT API/USER/:ID
+curl -H "Authorization: Bearer JWT TOKEN" -X PUT --data "user=updateduser&email=updated@email.com" http://localhost:8080/api/user/:USERID
+
+DELETE API/USER/:ID
+curl -H "Authorization: Bearer JWT TOKEN" -X DELETE http://localhost:8080/api/user/:USERID
+
+LOGIN API/LOGIN
+curl --data "username=user&password=password" http://localhost:8080/api/login
